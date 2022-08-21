@@ -4,6 +4,7 @@ pragma solidity 0.8.13;
 
 import "./Interfaces/IERC20.sol";
 import "./Interfaces/IUniswapV3Pool.sol";
+import "./Interfaces/IWETH.sol"; 
 
 // Assumes flashloan miner has capital in ETH and only ETH
 // Currently no fee
