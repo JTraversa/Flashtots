@@ -3,19 +3,7 @@
 pragma solidity 0.8.13;
 
 import "./Interfaces/IERC20.sol";
-import "@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol";
-
-interface IWETH is IERC20 {
-    function deposit() external payable;
-    function withdraw(uint) external;
-}
-library CastU256I256 {
-    /// @dev Safely cast an uint256 to an int256
-    function i256(uint256 x) internal pure returns (int256 y) {
-        require (x <= uint256(type(int256).max), "Cast overflow");
-        y = int256(x);
-    }
-}
+import "./Interfaces/IUniswapV3Pool.sol";
 
 // Assumes flashloan miner has capital in ETH and only ETH
 // Currently no fee
